@@ -1,12 +1,8 @@
 import { ModeToggle } from "@/components/ui/ThemeToggleButton";
-import React from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Home = () => {
-  return (
-    <div className='bg-red-600 dark:text-white text-white'>
-      Home <ModeToggle />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;

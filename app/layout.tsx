@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Manrope } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+});
+const rethink_sans = Rethink_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-rethink_sans",
+});
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,19 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
+    <html lang="en">
+      <body className={manrope.variable + " " + rethink_sans.variable}>
         <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
+          attribute="class"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          {/* <LinearGradient> */}
-          {/* <AuroraBackground> */}
           {children}
-          {/* </AuroraBackground> */}
-          {/* </LinearGradient> */}
         </ThemeProvider>
       </body>
     </html>
