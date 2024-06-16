@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Manrope } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
+import BackgroundContainer from "@/components/Background";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -28,15 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={manrope.variable + " " + rethink_sans.variable}>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
+          attribute='class'
+          defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <BackgroundContainer>{children}</BackgroundContainer>
         </ThemeProvider>
       </body>
     </html>
