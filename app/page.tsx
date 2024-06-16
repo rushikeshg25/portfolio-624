@@ -1,11 +1,10 @@
 import { ModeToggle } from "@/components/ui/ThemeToggleButton";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Home = () => {
   return (
-    <div>
+    <main className=''>
       <ModeToggle />
-    </div>
+    </main>
   );
 };
 
