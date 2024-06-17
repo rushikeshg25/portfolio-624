@@ -17,8 +17,8 @@ const SidebarTabs = [
   //   },
 
   {
-    name: "Connect",
-    href: "/connect",
+    name: "Contact",
+    href: "/contact",
   },
 ];
 

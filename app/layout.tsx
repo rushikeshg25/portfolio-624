@@ -38,7 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundContainer className='flex justify-center pt-2 w-full h-full'>
+          <BackgroundContainer className='flex justify-center  w-full h-full'>
             <div className='flex flex-row '>
               <div className='h-screen '>
                 <Sidebar className='sticky top-0' />

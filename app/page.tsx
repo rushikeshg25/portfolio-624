@@ -2,7 +2,7 @@ import { ModeToggle } from "@/components/ui/ThemeToggleButton";
 
 const Home = () => {
   return (
-    <main className=''>
+    <main className='flex flex-col items-center  '>
       <ModeToggle />
     </main>
   );
