@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Manrope } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import BackgroundContainer from "@/components/Background";
-import { Sidebar } from "lucide-react";
+import Sidebar from "@/components/Sidebar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -38,10 +38,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundContainer>
+          <BackgroundContainer className='flex justify-center pt-2 w-full h-full'>
             <div className='flex flex-row '>
-              <div className=''>
-                <Sidebar />
+              <div className='h-screen '>
+                <Sidebar className='sticky top-0' />
+                <div className='h-screen'></div>
               </div>
               <div className='flex-none'>{children}</div>
             </div>

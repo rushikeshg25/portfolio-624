@@ -7,6 +7,10 @@ const SidebarTabs = [
     name: "About",
     href: "/about",
   },
+  {
+    name: "Skills",
+    href: "/skills",
+  },
   //   {
   //     name: "Blogs",
   //     href: "/blogs",
