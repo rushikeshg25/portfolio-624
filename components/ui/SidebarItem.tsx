@@ -4,14 +4,19 @@ import { useRouter } from "next/navigation";
 
 interface SidebarItemProps {
   children: string;
-  key: string;
+  keyValue: string;
   href: string;
 }
 
-const SidebarItem = ({ children, key, href }: SidebarItemProps) => {
+const SidebarItem = ({ children, keyValue, href }: SidebarItemProps) => {
   const router = useRouter();
   return (
-    <Button variant={"link"} className='' onClick={() => router.push(href)}>
+    <Button
+      key={keyValue}
+      variant={"link"}
+      className='py-0'
+      onClick={() => router.push(href)}
+    >
       {children}
     </Button>
   );

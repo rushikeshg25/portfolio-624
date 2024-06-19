@@ -39,12 +39,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <BackgroundContainer className='flex justify-center  w-full h-full'>
-            <div className='flex flex-row '>
-              <div className='h-screen '>
-                <Sidebar className='sticky top-0' />
-                <div className='h-screen'></div>
+            <div className='flex flex-row w-screen items justify-center '>
+              <div className='h-screen sticky top-0'>
+                <Sidebar className='sticky top-0 pt-12 pb-2 ' />
               </div>
-              <div className='flex-none'>{children}</div>
+              <div className='flex-none pl-8 sm:w-6/12'>{children}</div>
             </div>
           </BackgroundContainer>
         </ThemeProvider>

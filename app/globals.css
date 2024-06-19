@@ -112,7 +112,7 @@
   background: radial-gradient(
     circle,
     rgba(18, 18, 18, 0.6) 0%,
-    /* Darker shades */ rgba(40, 40, 40, 0.97) 80%,
+    /* Darker shades */ rgb(2, 8, 23) 80%,
     rgba(40, 40, 40, 1) 100%
   );
 }

@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center '>
       {" "}
       <div className='grid sm:grid-cols-2 gap-3 p-3'>
         <button>
