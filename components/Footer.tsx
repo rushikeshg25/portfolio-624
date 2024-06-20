@@ -4,7 +4,7 @@ const Footer = () => {
       <p className='text-sm'>
         Made with ❤️ by{" "}
         <a
-          href='https://twitter.com/joshuatz'
+          href='https://twitter.com/rushikesh_g10'
           target='_blank'
           rel='noopener noreferrer'
         >
