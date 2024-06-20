@@ -6,6 +6,7 @@ import { Manrope } from "next/font/google";
 import { Rethink_Sans } from "next/font/google";
 import BackgroundContainer from "@/components/Background";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -38,13 +39,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundContainer className='flex justify-center  w-full h-full'>
-            <div className='flex flex-row  justify-center '>
-              <div className='h-screen sticky top-0'>
+          <BackgroundContainer className='flex justify-center w-full h-full'>
+            <div className='flex flex-row justify-center '>
+              <div className='sticky top-0 h-screen'>
                 <Sidebar className='sticky top-0 pt-12 pb-2 ' />
               </div>
               <div className='flex-none pl-8 sm:w-6/12'>{children}</div>
             </div>
+            <Footer />
           </BackgroundContainer>
         </ThemeProvider>
       </body>

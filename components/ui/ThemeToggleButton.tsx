@@ -17,12 +17,12 @@ export function ModeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className='dark:bg-black' asChild>
         <Button variant='ghost' className='w-full'>
           Theme
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='center'>
+      <DropdownMenuContent align='center' className='dark:bg-black'>
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>

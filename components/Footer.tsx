@@ -1,18 +1,17 @@
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className='flex items-center justify-center w-full h-20 bg-gray-100 text-gray-500'>
-      <p className='text-sm'>
-        Made with ❤️ by{" "}
-        <a
-          href='https://twitter.com/rushikesh_g10'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Rushikesh
-        </a>
-      </p>
-    </div>
-  );
-};
+    <footer className='w-full py-6 bg-transparent md:py-8'>
+      <div className='container flex flex-col items-center justify-between max-w-5xl gap-4 md:flex-row'>
+        <div className='flex items-center gap-2'>
+          <span className='text-sm font-medium text-muted-foreground'>
+            Rushikesh Ghotekar
+          </span>
+        </div>
 
-export default Footer;
+        <p className='text-xs text-muted-foreground'>
+          &copy; 2024 Portfolio. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
