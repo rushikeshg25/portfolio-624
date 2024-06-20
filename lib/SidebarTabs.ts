@@ -3,11 +3,11 @@ const SidebarTabs = [
     name: "About",
     href: "/about",
   },
-  { name: "Projects", href: "/projects" },
   {
-    name: "Skills",
-    href: "/skills",
+    name: "Stack",
+    href: "/stack",
   },
+  { name: "Projects", href: "/projects" },
   //   {
   //     name: "Blogs",
   //     href: "/blogs",

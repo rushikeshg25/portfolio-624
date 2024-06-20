@@ -100,7 +100,7 @@
   position: relative;
   min-height: 100vh;
   padding-bottom: 4em;
-  background-color: #0a0a0a; /* Dark background color */
+  background-color: black; /* Dark background color */
   background-image: linear-gradient(#333333 0.9px, transparent 0.9px),
     linear-gradient(to right, #333333 0.9px, #121212 0.9px); /* Adjusted grid colors */
   background-size: 22px 22px;
@@ -112,7 +112,7 @@
   background: radial-gradient(
     circle,
     rgba(18, 18, 18, 0.6) 0%,
-    /* Darker shades */ rgb(2, 8, 23) 80%,
-    rgba(40, 40, 40, 1) 100%
+    #000000 80%,
+    rgb(17, 17, 17) 100%
   );
 }
