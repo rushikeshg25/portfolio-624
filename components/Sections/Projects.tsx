@@ -1,6 +1,5 @@
 "use client";
 
-import { MagicCard, MagicContainer } from "@/components/magic-card";
 import { projects } from "@/lib/Projects";
 import { Button } from "../ui/button";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -24,8 +23,14 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaAws, FaDocker, FaNodeJs, FaJava } from "react-icons/fa";
 import { DiRedis } from "react-icons/di";
 import { TbBrandSocketIo } from "react-icons/tb";
-import Connect from "./Connect";
 import { GlareCard } from "../ui/glare-card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+} from "../ui/card";
 
 export const icons: { [key: string]: JSX.Element } = {
   TypeScript: <SiTypescript size={22} />,
@@ -57,19 +62,19 @@ const Projects = ({ className }: { className?: string }) => {
     <div className='flex flex-col w-full py-8 gap-7'>
       <div className='flex gap-3'>
         <h1 className='text-3xl font-semibold'>Projects</h1>
-        <div className='flex items-center text-subheading'>
-          (Sorted by most recent)
-        </div>
       </div>
-      <div className={"grid grid-cols-1 md:grid-cols-2  gap-4 "}>
+      <div className={"grid grid-cols-1 md:grid-cols-2  gap-5 "}>
         {projects.map((project) => (
-          <GlareCard
-            key={project.name}
-            className='flex flex-col w-full shadow-2xl cursor-pointer'
-          >
-            <div className='flex flex-col gap-1'>
-              <div className='font-semibold'>{project.name}</div>
-              <div className='text-subheading'>{project.description}</div>
+          <Card key={project.name} className='dark:bg-black'>
+            <CardHeader className='font-semibold'>{project.name}</CardHeader>
+            <CardContent>
+              <div className='flex flex-col gap-1'>
+                <CardDescription className='text-subheading'>
+                  {project.description}
+                </CardDescription>
+              </div>
+            </CardContent>
+            <CardFooter>
               <div className='flex flex-row justify-between w-full'>
                 <div className='flex flex-row justify-end gap-2'>
                   {project.TechStack.map((tech) => (
@@ -100,10 +105,13 @@ const Projects = ({ className }: { className?: string }) => {
                   </Button>
                 </div>
               </div>
-            </div>
-            <div className='pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(150,145,150,0.3),rgba(255,255,255,0))]' />
-          </GlareCard>
+            </CardFooter>
+          </Card>
         ))}
+      </div>
+      <div>
+        More of my creations are available on my{" "}
+        <a href='https://github.com/rushikeshg25/'>GitHub</a>
       </div>
     </div>
   );
