@@ -73,6 +73,62 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Light Mode Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+
+  /* Dark Mode Scrollbar */
+  .dark ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #2e2e2e;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+    border: 3px solid #2e2e2e;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  .dark ::-webkit-scrollbar-corner {
+    background: #2e2e2e;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .dark * {
+    scrollbar-color: #555 #2e2e2e;
+  }
 }
 
 .background-design {
@@ -83,6 +139,8 @@
   background-image: linear-gradient(#bbbbbb 0.9px, transparent 0.9px),
     linear-gradient(to right, #bbbbbb 0.9px, #ffffff 0.9px);
   background-size: 22px 22px;
+  position: fixed !important;
+  overflow-y: scroll;
 }
 
 .blur-gradient {
@@ -94,6 +152,8 @@
     rgba(247, 248, 249, 0.97) 80%,
     rgba(247, 248, 249, 1) 100%
   );
+  position: fixed !important;
+  overflow-y: scroll;
 }
 
 .dark .background-design {
@@ -104,6 +164,8 @@
   background-image: linear-gradient(#333333 0.9px, transparent 0.9px),
     linear-gradient(to right, #333333 0.9px, #121212 0.9px); /* Adjusted grid colors */
   background-size: 22px 22px;
+  position: fixed !important;
+  overflow-y: scroll;
 }
 
 .dark .blur-gradient {
@@ -115,4 +177,6 @@
     #000000 80%,
     rgb(17, 17, 17) 100%
   );
+  position: fixed !important;
+  overflow-y: scroll;
 }

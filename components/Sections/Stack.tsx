@@ -6,6 +6,7 @@ import {
   SiExpress,
   SiCplusplus,
   SiSpringboot,
+  SiMongodb,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
@@ -16,11 +17,11 @@ import { DiRedis } from "react-icons/di";
 import StackCard from "../StackCard";
 const Stack = () => {
   return (
-    <div className='flex flex-col gap-7 py-8'>
+    <div className='flex flex-col py-8 gap-7'>
       <div className='flex '>
         <h1 className='text-3xl font-semibold'>Stack</h1>
       </div>
-      <div className='flex flex-row flex-wrap gap-3  px-2'>
+      <div className='flex flex-row flex-wrap gap-3 px-2'>
         <StackCard stackLogo={SiTypescript} stackName='Typescript' />
         <StackCard stackLogo={IoLogoJavascript} stackName='Javascript' />
         <StackCard stackLogo={SiReact} stackName='React' />
@@ -31,6 +32,7 @@ const Stack = () => {
         <StackCard stackLogo={SiPrisma} stackName='Prisma' />
         <StackCard stackLogo={SiCplusplus} stackName='C++' />
         <StackCard stackLogo={BiLogoPostgresql} stackName='Postgres' />
+        <StackCard stackLogo={SiMongodb} stackName='MongoDB' />
         <StackCard stackLogo={DiRedis} stackName='Redis' />
         <StackCard stackLogo={FaAws} stackName='AWS' />
         <StackCard stackLogo={FaDocker} stackName='Docker' />
@@ -39,7 +41,8 @@ const Stack = () => {
       </div>
       <div className='text-md'>
         My Strength is building core web applications which are problem-solving
-        and scalable. I'm currently working with TypeScript,NextJs and Postgres.
+        and scalable. I'm currently working with TypeScript, NextJs and
+        Postgres.
       </div>
     </div>
   );

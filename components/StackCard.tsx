@@ -22,7 +22,7 @@ const StackCard: React.FC<StackCardProps> = ({
         <div className=''>
           <CardItem
             translateZ={60}
-            className='text-lg font-normal rounded-xl dark:text-white'
+            className='text-md font-normal rounded-xl dark:text-white'
           >
             {stackName}
           </CardItem>
